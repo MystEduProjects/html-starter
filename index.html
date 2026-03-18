@@ -1,96 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victoria Martínez — Community Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --cream:#F5F1EC; --warm:#EDE7DF; --taupe:#B8A99A; --dark:#1C1A18; --mid:#4A4540; --light:#9A9290; --accent:#8B7355; --white:#FDFCFA; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--cream); color:var(--dark); font-family:'DM Sans',sans-serif; font-weight:300; line-height:1.7; }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify-content:space-between; align-items:center; padding:1.2rem 3rem; background:rgba(245,241,236,0.92); backdrop-filter:blur(10px); border-bottom:1px solid rgba(184,169,154,0.3); }
+  .nav-name { font-family:'Cormorant Garamond',serif; font-size:1.15rem; letter-spacing:0.08em; }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-links a { font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color 0.3s; }
+  .nav-links a:hover { color:var(--accent); }
+  .hero { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:8rem 2rem 4rem; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 50% at 30% 40%, rgba(184,169,154,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 60% at 75% 65%, rgba(139,115,85,0.1) 0%, transparent 70%); pointer-events:none; }
+  .hero-eyebrow { font-size:0.7rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--taupe); margin-bottom:1.5rem; animation:fadeUp 0.8s ease both; }
+  .hero-name { font-family:'Cormorant Garamond',serif; font-size:clamp(3.5rem,8vw,7rem); font-weight:300; line-height:1.05; color:var(--dark); animation:fadeUp 0.8s 0.15s ease both; }
+  .hero-name em { font-style:italic; color:var(--accent); }
+  .hero-divider { width:60px; height:1px; background:var(--taupe); margin:2rem auto; }
+  .hero-title { font-size:0.78rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--mid); margin-bottom:2.5rem; animation:fadeUp 0.8s 0.4s ease both; }
+  .hero-contact { display:flex; gap:2rem; justify-content:center; flex-wrap:wrap; animation:fadeUp 0.8s 0.5s ease both; }
+  .hero-contact a { font-size:0.8rem; color:var(--light); text-decoration:none; transition:color 0.3s; }
+  .hero-contact a:hover { color:var(--accent); }
+  .hero-scroll { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--taupe); }
+  .hero-scroll::after { content:''; display:block; width:1px; height:40px; background:var(--taupe); margin:0.6rem auto 0; }
+  section { padding:6rem 0; }
+  .container { max-width:900px; margin:0 auto; padding:0 2.5rem; }
+  .container-wide { max-width:1100px; margin:0 auto; padding:0 2.5rem; }
+  .section-label { font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--taupe); margin-bottom:1rem; display:flex; align-items:center; gap:1rem; }
+  .section-label::after { content:''; flex:1; height:1px; background:var(--warm); }
+  .section-heading { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3rem); font-weight:300; line-height:1.2; color:var(--dark); margin-bottom:1.5rem; }
+  .section-body { font-size:0.95rem; color:var(--mid); max-width:640px; line-height:1.8; }
+  #sobre { background:var(--white); }
+  .sobre-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+  .sobre-text p { font-size:0.95rem; color:var(--mid); line-height:1.9; margin-bottom:1rem; }
+  .plataformas { margin-bottom:2.5rem; }
+  .plataforma-item { padding:1rem 0; border-bottom:1px solid var(--warm); }
+  .plataforma-item:first-child { border-top:1px solid var(--warm); }
+  .plataforma-name { font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--dark); font-weight:500; margin-bottom:0.3rem; }
+  .plataforma-desc { font-size:0.82rem; color:var(--light); }
+  .skills-wrap { display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .skill-tag { font-size:0.72rem; letter-spacing:0.08em; padding:0.35rem 0.9rem; border:1px solid var(--taupe); color:var(--accent); }
+  #servicios { background:var(--dark); }
+  #servicios .section-label { color:var(--taupe); }
+  #servicios .section-label::after { background:rgba(184,169,154,0.2); }
+  #servicios .section-heading { color:var(--white); }
+  .servicios-grid { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid rgba(184,169,154,0.2); margin-top:3rem; }
+  .servicio-item { padding:2.5rem 2rem; border-right:1px solid rgba(184,169,154,0.2); border-bottom:1px solid rgba(184,169,154,0.2); transition:background 0.3s; }
+  .servicio-item:hover { background:rgba(184,169,154,0.06); }
+  .servicio-item:nth-child(3n) { border-right:none; }
+  .servicio-num { font-family:'Cormorant Garamond',serif; font-size:2.5rem; color:var(--taupe); opacity:0.4; line-height:1; margin-bottom:1.2rem; }
+  .servicio-name { font-size:0.78rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--white); margin-bottom:0.8rem; font-weight:500; }
+  .servicio-desc { font-size:0.84rem; color:rgba(255,255,255,0.45); line-height:1.7; }
+  #experiencia { background:var(--cream); }
+  #personal { background:var(--white); }
+  #formación { background:var(--cream); }
+  .exp-block { margin-bottom:5rem; padding-bottom:5rem; border-bottom:1px solid var(--warm); }
+  .exp-block:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+  .exp-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem; }
+  .exp-name { font-family:'Cormorant Garamond',serif; font-size:1.9rem; font-weight:400; color:var(--dark); }
+  .exp-period { font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--taupe); padding-top:0.4rem; }
+  .exp-role { font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1.5rem; }
+  .exp-desc { font-size:0.92rem; color:var(--mid); line-height:1.85; max-width:680px; margin-bottom:2rem; }
+  .stats-row { display:grid; border:1px solid var(--warm); margin-bottom:2rem; }
+  .cols-4 { grid-template-columns:repeat(4,1fr); }
+  .stat-cell { padding:1.5rem 1rem; text-align:center; border-right:1px solid var(--warm); background:var(--white); }
+  .stat-cell:last-child { border-right:none; }
+  .stat-num { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:300; color:var(--dark); line-height:1; margin-bottom:0.4rem; }
+  .stat-lbl { font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--light); line-height:1.4; }
+  .highlight-box { border-left:3px solid var(--taupe); padding:1.2rem 1.5rem; background:var(--white); margin-bottom:2rem; }
+  .highlight-label { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--taupe); margin-bottom:0.5rem; }
+  .highlight-text { font-size:0.88rem; color:var(--mid); line-height:1.7; }
+  .metrics-table { width:100%; border-collapse:collapse; font-size:0.85rem; margin-bottom:0.8rem; }
+  .metrics-table th { font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--white); background:var(--dark); padding:0.85rem 1rem; text-align:left; font-weight:500; }
+  .metrics-table td { padding:0.75rem 1rem; color:var(--mid); border-bottom:1px solid var(--warm); }
+  .metrics-table tr:nth-child(even) td { background:var(--white); }
+  .metrics-table tr.hl td { background:var(--warm); color:var(--dark); font-weight:500; }
+  .tag-up { font-size:0.7rem; color:#5C8A6E; font-weight:500; margin-left:0.4rem; }
+  #contacto { background:var(--dark); text-align:center; padding:6rem 2rem; }
+  .contacto-heading { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5vw,4rem); font-weight:300; color:var(--white); margin:1rem 0 1.5rem; line-height:1.2; }
+  .contacto-heading em { font-style:italic; color:var(--taupe); }
+  .contacto-links { display:flex; gap:2rem; justify-content:center; flex-wrap:wrap; margin-top:2rem; }
+  .contacto-link { font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.5); text-decoration:none; padding-bottom:2px; border-bottom:1px solid rgba(184,169,154,0.4); transition:color 0.3s, border-color 0.3s; }
+  .contacto-link:hover { color:var(--taupe); border-color:var(--taupe); }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+  .reveal { opacity:0; transform:translateY(28px); transition:opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity:1; transform:none; }
+  @media(max-width:768px){
+    nav { padding:1rem 1.5rem; } .nav-links { display:none; }
+    .sobre-grid { grid-template-columns:1fr; gap:3rem; }
+    .servicios-grid { grid-template-columns:1fr; }
+    .cols-4 { grid-template-columns:repeat(2,1fr); }
+    .exp-header { flex-direction:column; }
+    .metrics-table th,.metrics-table td { padding:0.6rem; font-size:0.78rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Victoria Martínez</span>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#personal">Perfil personal</a></li>
+    <li><a href="#formacion">Formación</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <p class="hero-eyebrow">Portfolio Profesional &middot; 2025-2026</p>
+  <h1 class="hero-name">Victoria<br><em>Martínez</em></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-title">Community Manager &nbsp;&middot;&nbsp; Estrategia de Contenido &nbsp;&middot;&nbsp; Diseño de Marca</p>
+  <div class="hero-contact">
+    <a href="mailto:vickymartinezr.cm@gmail.com">vickymartinezr.cm@gmail.com</a>
+    <a href="https://instagram.com/vicky.martinez.r" target="_blank">@vicky.martinez.r</a>
+    <a href="tel:+542235266497">+54 223 526-6497</a>
+  </div>
+  <p class="hero-scroll">Scroll</p>
+</section>
+
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-text reveal">
+        <p class="section-label">Sobre mí</p>
+        <h2 class="section-heading">Estrategia que conecta. Estética que comunica.</h2>
+        <p>Soy Community Manager con experiencia en educación e idiomas. Gestiono redes sociales, creo contenido y diseño la identidad visual de las marcas que acompaño.</p>
+        <p>No solo publico: entiendo que contenido genera comunidad real, como construir una presencia coherente y como traducir la identidad de una marca en algo visualmente memorable.</p>
+        <p>Mi background como modelo me entrenó el ojo para la comunicación visual: entiendo la composición, la iluminación y el impacto de una imagen antes de que diga una sola palabra.</p>
+      </div>
+      <div class="reveal">
+        <div class="plataformas">
+          <div class="plataforma-item">
+            <div class="plataforma-name">Instagram</div>
+            <div class="plataforma-desc">Diseño de feed &middot; Reels &middot; Historias &middot; Métricas &middot; Crecimiento orgánico</div>
+          </div>
+          <div class="plataforma-item">
+            <div class="plataforma-name">X / Twitter</div>
+            <div class="plataforma-desc">Gestión de comunidad &middot; Comunicación en tiempo real &middot; Posicionamiento de marca</div>
+          </div>
+        </div>
+        <div class="skills-wrap">
+          <span class="skill-tag">Estrategia de contenido</span>
+          <span class="skill-tag">Copywriting</span>
+          <span class="skill-tag">Diseño de feed</span>
+          <span class="skill-tag">Calendario editorial</span>
+          <span class="skill-tag">Análisis de métricas</span>
+          <span class="skill-tag">Gestión de comunidad</span>
+          <span class="skill-tag">Branding visual</span>
+          <span class="skill-tag">Inglés intermedio</span>
+          <span class="skill-tag">Diseño de logo</span>
+          <span class="skill-tag">Edición de fotos</span>
+          <span class="skill-tag">Ilustración gráfica</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="container-wide">
+    <div class="reveal">
+      <p class="section-label">Servicios</p>
+      <h2 class="section-heading">Lo que ofrezco</h2>
+    </div>
+    <div class="servicios-grid reveal">
+      <div class="servicio-item">
+        <div class="servicio-num">01</div>
+        <div class="servicio-name">Gestión de Redes</div>
+        <div class="servicio-desc">Planificación y publicación de contenido, gestión de comunidad, respuesta a mensajes, calendario editorial y derivación de consultas.</div>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-num">02</div>
+        <div class="servicio-name">Creación de Contenido</div>
+        <div class="servicio-desc">Redacción de copies estratégicos, guiones para reels y contenido educativo de valor adaptado al nicho y la audiencia.</div>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-num">03</div>
+        <div class="servicio-name">Diseño de Instagram</div>
+        <div class="servicio-desc">Diseño de feed coherente, paleta visual, plantillas, destacados, branding visual y diseño de logo desde cero.</div>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-num">04</div>
+        <div class="servicio-name">Edición de Fotos</div>
+        <div class="servicio-desc">Retoque y edicion fotográfica profesional para contenido de redes. Tratamiento de color, composición y acabado visual para que cada imagen comunique exactamente lo que tiene que comunicar.</div>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-num">05</div>
+        <div class="servicio-name">Ilustración Gráfica</div>
+        <div class="servicio-desc">Creación de piezas gráficas e ilustraciones para contenido digital. Materiales visuales únicos que refuerzan la identidad de la marca y destacan en el feed.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:4rem">
+      <p class="section-label">Experiencia profesional</p>
+      <h2 class="section-heading">Proyectos</h2>
+    </div>
+
+    <div class="exp-block reveal">
+      <div class="exp-header">
+        <h3 class="exp-name">TFL&#174;</h3>
+        <span class="exp-period">2025 &mdash; Presente</span>
+      </div>
+      <p class="exp-role">Community Manager &middot; Rebranding Estético &middot; Instagram</p>
+      <p class="exp-desc">TFL es una consultora boutique especializada en comunicación profesional en inglés: liderazgo, negociación, reuniones de alto impacto e inteligencia emocional. Trabaja con profesionales que ya tienen el idioma y necesitan usarlo con precisión y autoridad. Me incorporé como Community Manager con el objetivo de llevar a cabo el rebranding estético integral de la marca, tomando la identidad visual desde su etapa actual y rediseñándola por completo.</p>
+      <div class="stats-row cols-4">
+        <div class="stat-cell"><div class="stat-num">1.118</div><div class="stat-lbl">Seguidores actuales</div></div>
+        <div class="stat-cell"><div class="stat-num">13K</div><div class="stat-lbl">Visualizaciones pico</div></div>
+        <div class="stat-cell"><div class="stat-num">+193%</div><div class="stat-lbl">Crecimiento mejor mes</div></div>
+        <div class="stat-cell"><div class="stat-num">100%</div><div class="stat-lbl">Crecimiento orgánico</div></div>
+      </div>
+      <table class="metrics-table">
+        <thead><tr><th>Mes</th><th>Visualizaciones</th><th>Alcance no seguidores</th><th>Seguidores</th></tr></thead>
+        <tbody>
+          <tr><td>Marzo 2025</td><td>2.600</td><td>39%</td><td>722</td></tr>
+          <tr class="hl"><td>Abril 2025</td><td>7.600 <span class="tag-up">+193%</span></td><td>33%</td><td>836</td></tr>
+          <tr><td>Mayo 2025</td><td>6.000</td><td>51%</td><td>981</td></tr>
+          <tr><td>Junio 2025</td><td>4.700</td><td>50%</td><td>981</td></tr>
+          <tr><td>Julio 2025</td><td>4.100</td><td>20%</td><td>994</td></tr>
+          <tr class="hl"><td>Octubre 2025</td><td>13.000 <span class="tag-up">Pico</span></td><td>42%</td><td>1.100</td></tr>
+          <tr><td>Noviembre 2025</td><td>3.400</td><td>37%</td><td>1.100</td></tr>
+          <tr><td>Diciembre 2025</td><td>1.200</td><td>47%</td><td>1.100</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="exp-block reveal">
+      <div class="exp-header">
+        <h3 class="exp-name">Mar de Idiomas</h3>
+        <span class="exp-period">Oct &mdash; Nov 2025 &middot; En pausa</span>
+      </div>
+      <p class="exp-role">Community Manager &middot; Diseño de Marca &middot; Cobertura de Eventos &middot; Instagram</p>
+      <p class="exp-desc">Mar de Idiomas fue un proyecto de dos meses: un encuentro social en Mar del Plata para practicar idiomas, compartir culturas y conectar personas. Los eventos reunían stands de inglés, francés, italiano y ruso, liderados por tres profesoras. Diseñé el logo y la identidad visual completa desde cero, manejé el Instagram, asistí a los eventos para capturar contenido en vivo, respondí mensajes y derivé consultas a cada profesora según el idioma correspondiente.</p>
+      <div class="highlight-box">
+        <div class="highlight-label">&#10022; Método de fidelización de clientes</div>
+        <p class="highlight-text">Se implemento el <strong>Pasaporte de Idiomas</strong>: una libreta personalizada donde los asistentes coleccionaban stickers y firmas en cada evento. Al completar 5 sellos, la siguiente entrada era gratis. El método generó mayor fidelidad, incentivó la reincidencia y le dio identidad única al proyecto.</p>
+      </div>
+      <div class="stats-row cols-4">
+        <div class="stat-cell"><div class="stat-num">200</div><div class="stat-lbl">Seguidores en 2 meses</div></div>
+        <div class="stat-cell"><div class="stat-num">13K</div><div class="stat-lbl">Visualizaciones en Octubre</div></div>
+        <div class="stat-cell"><div class="stat-num">11.600</div><div class="stat-lbl">Vistas publicación mas exitosa</div></div>
+        <div class="stat-cell"><div class="stat-num">2.900</div><div class="stat-lbl">Vistas post Halloween</div></div>
+      </div>
+      <table class="metrics-table">
+        <thead><tr><th>Mes</th><th>Visualizaciones</th><th>Alcance no seguidores</th><th>Seguidores</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>Octubre 2025</td><td>13.000</td><td>56%</td><td>179 <span class="tag-up">+192 vs Sep</span></td></tr>
+          <tr><td>Noviembre 2025</td><td>5.500</td><td>50%</td><td>210</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="personal">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:3rem">
+      <p class="section-label">Perfil personal</p>
+      <h2 class="section-heading">@vicky.martinez.r</h2>
+      <p class="section-body">Cuenta personal con casi 10K seguidores, crecimiento 100% orgánico y audiencia 79,3% argentina. Actualmente de uso personal, con contenido ocasional en historias sobre lifestyle y gaming. En sus inicios estuvo orientada a mi desarrollo profesional en redes sociales, aunque hoy refleja un perfil más cotidiano.</p>
+    </div>
+    <div class="stats-row cols-4 reveal">
+      <div class="stat-cell"><div class="stat-num">~9.5K</div><div class="stat-lbl">Seguidores</div></div>
+      <div class="stat-cell"><div class="stat-num">7.600</div><div class="stat-lbl">Visualizaciones mejor mes</div></div>
+      <div class="stat-cell"><div class="stat-num">+73%</div><div class="stat-lbl">Crecimiento Ene vs Dic</div></div>
+      <div class="stat-cell"><div class="stat-num">79,3%</div><div class="stat-lbl">Audiencia argentina</div></div>
+    </div>
+    <div class="reveal" style="margin-top:2rem">
+      <table class="metrics-table">
+        <thead><tr><th>Mes</th><th>Visualizaciones</th><th>Alcance no seguidores</th><th>Seguidores</th></tr></thead>
+        <tbody>
+          <tr><td>Octubre 2025</td><td>4.400</td><td>58%</td><td>9.500</td></tr>
+          <tr><td>Noviembre 2025</td><td>5.700 <span class="tag-up">+28%</span></td><td>45%</td><td>9.500</td></tr>
+          <tr><td>Diciembre 2025</td><td>4.400</td><td>39%</td><td>9.400</td></tr>
+          <tr class="hl"><td>Enero 2026</td><td>7.600 <span class="tag-up">+73%</span></td><td>49%</td><td>9.400</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="reveal" style="margin-top:3rem">
+      <div class="highlight-box">
+        <div class="highlight-label">&#10022; Colaboración de marca</div>
+        <p class="highlight-text"><strong>The Box Shoes</strong> &mdash; Participación como modelo en una campaña publicitaria de la marca. La experiencia marcó un punto de inflexión en mi trayectoria: la fundadora de la marca, con su visión y forma de comunicar, influyó e inspiró en mí la decisión de orientarme profesionalmente hacia las redes sociales y la gestión de contenido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formación">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:4rem">
+      <p class="section-label">Formación académica</p>
+      <h2 class="section-heading">Educación</h2>
+    </div>
+    <div class="exp-block reveal">
+      <div class="exp-header">
+        <h3 class="exp-name">Relaciones Públicas e Institucionales</h3>
+        <span class="exp-period">2022 &mdash; 2025</span>
+      </div>
+      <p class="exp-role">Universidad CAECE &middot; Carrera de Analista en Relaciones Públicas &middot; Cursada avanzada</p>
+      <p class="exp-desc">Cursé la carrera de Analista en Relaciones Públicas hasta instancias avanzadas, con la mayoría de la formación completada. El recorrido me brindó una base sólida en comunicación estratégica, imagen institucional y gestión de públicos, directamente aplicable a mi trabajo como Community Manager.</p>
+      <div class="highlight-box">
+        <div class="highlight-label">&#10022; Materias de aplicación directa al CM</div>
+        <p class="highlight-text">Introducción a las Relaciones Públicas &middot; Taller de Escritura I, II y III &middot; Introducción a la Comunicación &middot; Ceremonial y Protocolo &middot; Tecnología Grafica &middot; Estadística &middot; Organización de Eventos &middot; Marketing &middot; Tecnología Audiovisual</p>
+      </div>
+    </div>
+    <div class="exp-block reveal">
+      <div class="exp-header">
+        <h3 class="exp-name">Comunicación Internacional</h3>
+        <span class="exp-period">2023</span>
+      </div>
+      <p class="exp-role">Universidad CAECE &middot; Mg. Melisa Centurion &amp; Lic. Romina Olguin</p>
+      <p class="exp-desc">Curso dictado en el marco de la carrera de Relaciones Públicas e Institucionales. Abordó la comunicación en contextos globales, protocolos internacionales y la gestión de mensajes en entornos multiculturales, una perspectiva valiosa para trabajar con marcas orientadas a audiencias diversas como TFL.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <p class="section-label" style="justify-content:center;color:var(--taupe);margin-bottom:0.5rem">Contacto</p>
+  <h2 class="contacto-heading">Trabajamos<br><em>juntos?</em></h2>
+  <p style="font-size:0.85rem;color:rgba(255,255,255,0.4);max-width:420px;margin:0 auto;line-height:1.7">Especializada en idiomas, redes sociales y comunicación digital.</p>
+  <div class="contacto-links">
+    <a href="mailto:vickymartinezr.cm@gmail.com" class="contacto-link">vickymartinezr.cm@gmail.com</a>
+    <a href="https://instagram.com/vicky.martinez.r" target="_blank" class="contacto-link">@vicky.martinez.r</a>
+    <a href="tel:+542235266497" class="contacto-link">+54 223 526-6497</a>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
 </html>
